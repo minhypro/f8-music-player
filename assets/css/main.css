@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+:root {
+    --primary-color: #639de0;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #f5f5f5;
+    color: var(--text-color);
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 48rem;
+    margin: auto;
+    text-align: center;
+    font-size: 1.6rem;
+    background-color: #f5f5f5;
+    background-size: cover;
+}
+
+#dashboard {
+    width: 48rem;
+    /* height: 42rem; */
+    background-color: #f5f5f5;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#dashboard header h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.cd-thumb img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#btn-container {
+    margin: 1.6rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #d3d3d3;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn.btn-toggle-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 3rem;
+    background-color: var(--primary-color);
+}
+
+.btn.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.icon-pause {
+    display: none;
+}
+
+.player.playing .icon-pause {
+    display: block;
+}
+
+.player.playing .icon-play {
+    display: none;
+}
+
+#controls-container {
+    margin: auto;
+    width: 40rem;
+}
+
+.slider {
+    margin-bottom: 2rem;
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.slider:hover {
+    cursor: pointer;
+}
+
+#playlist {
+    margin-top: 42rem;
+    width: 100%;
+}
+
+.song {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+    margin: 1.6rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.song.active {
+    background-color: var(--primary-color);
+    background-blend-mode: lighten;
+    color: #fff;
+}
+
+.song:hover {
+    cursor: pointer;
+}
+
+.song:active {
+    opacity: 0.7;
+}
+
+.song-title {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.song-singer {
+    font-size: 1.4rem;
+    margin-top: 0.4rem;
+}
+
+.song-thumb {
+    margin: 1rem;
+}
+
+.song-thumb img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.song-info {
+    width: 100%;
+}
+
+.song-setting {
+    /* padding: 0 2rem; */
+    width: 4rem;
+    height: 3rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d3d3d3;
+    border-radius: 50%;
+}
+
+.song-setting:hover {
+    cursor: pointer;
+}

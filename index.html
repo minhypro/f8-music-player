@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>Music player</title>
+</head>
+
+<body>
+    <div class="player">
+        <!-- Dashboard -->
+        <div id="dashboard">
+            <!-- Header -->
+            <header>
+                <h4>Now playing</h4>
+                <h2 id="title">Có Không Giữ Mất Đừng Tìm</h2>
+            </header>
+            <!-- CD -->
+            <div id="cd">
+                <div class="cd-thumb">
+                    <img src="https://i.ytimg.com/vi/kdVeYgGtO3Q/hqdefault.jpg" alt="mp3">
+                </div>
+            </div>
+            <!-- Control -->
+            <div id="controls-container">
+                <div id="btn-container">
+                    <div class="btn repeat"><i class="fa-solid fa-repeat"></i></div>
+                    <div class="btn prev"><i class="fa-solid fa-backward-step"></i></div>
+                    <div class="btn btn-toggle-play">
+                        <i class="fas fa-pause icon-pause"></i>
+                        <i class="fas fa-play icon-play"></i>
+                    </div>
+                    <div class="btn next"><i class="fa-solid fa-forward-step"></i></div>
+                    <div class="btn shuffle"><i class="fa-solid fa-shuffle"></i></div>
+                </div>
+                <div id="progress-bar">
+                    <input type="range" name="progess-bar" class="slider" value="0">
+                </div>
+                <audio id="audio" src=""></audio>
+            </div>
+        </div>
+        <!-- Playlist -->
+        <div id="playlist">
+           
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
